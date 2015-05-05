@@ -1,7 +1,7 @@
 bash.origin.php
 ===============
 
-A plugin for [Bash.Origin](https://github.com/bash-origin/bash.origin) to make [PHP](https://php.net tools available.
+A plugin for [Bash.Origin](https://github.com/bash-origin/bash.origin) to make [PHP](https://php.net) tools available.
 
 
 Requirements
