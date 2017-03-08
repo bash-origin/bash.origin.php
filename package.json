@@ -3,7 +3,7 @@
     "name": "bash.origin.php",
     "version": "0.1.0",
     "dependencies": {
-        "bash.origin.test": "^0.1.17"
+        "bash.origin.test": "^0.1.18"
     },
     "scripts": {
         "test": "bash.origin.test examples"
