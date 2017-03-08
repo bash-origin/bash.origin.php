@@ -16,10 +16,10 @@ CALL_php start ${port}
 sleep 1
 local requestID=`uuidgen`
 local command="curl -s http://localhost:${port}/?rid=${requestID}"
-echo "Command: ${command}"
 
 
 echo "TEST_MATCH_IGNORE>>>"
+echo "Command: ${command}"
 local response=`${command}`
 echo "Response: ${response}"
 echo "<<<TEST_MATCH_IGNORE"
