@@ -6,12 +6,6 @@ bash.origin.php
 A plugin for [Bash.Origin](https://github.com/bash-origin/bash.origin) to make [PHP](https://php.net) tools available.
 
 
-Requirements
-------------
-
-  * OSX
-
-
 Usage
 -----
 
@@ -38,10 +32,3 @@ API
 
 Calls [composer](https://getcomposer.org) for current working directory passing along all arguments.
 
-
-License
-=======
-
-Original Author: [Christoph Dorn](http://christophdorn.com)
-
-[UNLICENSE](http://unlicense.org/)
