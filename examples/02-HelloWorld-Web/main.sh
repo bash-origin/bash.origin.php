@@ -13,21 +13,10 @@ local port="8080"
 CALL_php start ${port}
 
 
-sleep 1
-local requestID=`uuidgen`
-local command="curl -s http://localhost:${port}/?rid=${requestID}"
-
-
-echo "TEST_MATCH_IGNORE>>>"
-echo "Command: ${command}"
-local response=`${command}`
-echo "Response: ${response}"
-echo "<<<TEST_MATCH_IGNORE"
-
-if [ "${response}" != "Hello World from PHP [${requestID}]!" ]; then
-		echo "ERROR: Did not get expected response!"
-		exit 1
-fi
+local rid=`uuidgen`
+CALL_request wait 10 200 \
+	"http://localhost:${port}/?rid=${rid}" \
+	"Hello World from PHP [${rid}]!"
 
 
 echo "OK"
