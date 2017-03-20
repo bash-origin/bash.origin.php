@@ -1,23 +1,12 @@
 #!/usr/bin/env bash.origin.script
 
 
-# TODO: Relocate into test helper
-if ! BO_if_os "osx"; then
-		echo "TODO: Support other operating systems."
-		echo "which docker: $(which docker)"
-		if BO_has docker; then
-				echo "docker --version: $(docker --version)"
-		fi
-		echo ">>>SKIP_TEST<<<"
-		exit 0
-fi
-
-
 echo "TEST_MATCH_IGNORE>>>"
 depend {
     "docker": {
-				"@com.github/bash-origin/bash.origin.docker#1": "localhost"
-		}
+		"@com.github/bash-origin/bash.origin.docker#s1": "localhost"
+	},
+	"request": "@com.github/bash-origin/bash.origin.request#s1"
 }
 
 
@@ -30,21 +19,10 @@ CALL_docker start "org.bashorigin.php.test.03" "${port}"
 echo "<<<TEST_MATCH_IGNORE"
 
 
-sleep 2
-local requestID=`uuidgen`
-local command="curl -s http://${DOCKER_CONTAINER_HOST_IP}:${port}/?rid=${requestID}"
-
-echo "TEST_MATCH_IGNORE>>>"
-echo "Command: ${command}"
-local response=`${command}`
-echo "Response: ${response}"
-echo "<<<TEST_MATCH_IGNORE"
-
-if [ "${response}" != "Hello World from Dockerized PHP [${requestID}]!" ]; then
-		echo "ERROR: Did not get expected response!"
-		exit 1
-fi
-
+local rid=`uuidgen`
+CALL_request wait 10 200 \
+	"http://${DOCKER_CONTAINER_HOST_IP}:${port}/?rid=${rid}" \
+	"Hello World from Dockerized PHP [${rid}]!"
 
 echo "OK"
 
