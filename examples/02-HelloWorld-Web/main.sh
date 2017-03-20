@@ -2,7 +2,8 @@
 
 echo "TEST_MATCH_IGNORE>>>"
 depend {
-    "php": "@com.github/bash-origin/bash.origin.php#1"
+    "php": "@com.github/bash-origin/bash.origin.php#1",
+	"request": "@com.github/bash-origin/bash.origin.request#s1"
 }
 echo "<<<TEST_MATCH_IGNORE"
 
