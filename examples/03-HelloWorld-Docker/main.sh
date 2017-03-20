@@ -21,7 +21,7 @@ echo "<<<TEST_MATCH_IGNORE"
 
 local rid=`uuidgen`
 CALL_request wait 10 200 \
-	"http://${DOCKER_CONTAINER_HOST_IP}:${port}/?rid=${rid}" \
+	"http://$(CALL_docker echo_CONTAINER_HOST_IP):${port}/?rid=${rid}" \
 	"Hello World from Dockerized PHP [${rid}]!"
 
 echo "OK"
