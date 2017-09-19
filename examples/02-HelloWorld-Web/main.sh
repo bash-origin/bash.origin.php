@@ -20,10 +20,8 @@ CALL_request expect_status 200 "http://localhost:${port}/?rid=${rid}"
 echo "<<<TEST_MATCH_IGNORE"
 
 
+echo "OK"
+
 echo "TEST_MATCH_IGNORE>>>"
 
 CALL_php stop ${port}
-
-echo "<<<TEST_MATCH_IGNORE"
-
-echo "OK"
