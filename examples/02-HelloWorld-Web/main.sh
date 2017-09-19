@@ -14,10 +14,9 @@ local port="8080"
 CALL_php start ${port}
 
 
+sleep 1
 local rid=`uuidgen`
-CALL_request wait 10 200 \
-	"http://localhost:${port}/?rid=${rid}" \
-	"Hello World from PHP [${rid}]!"
+CALL_request expect_status 200 "http://localhost:${port}/?rid=${rid}"
 
 
 echo "OK"

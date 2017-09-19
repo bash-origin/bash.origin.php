@@ -3,7 +3,7 @@
     "name": "bash.origin.php",
     "version": "0.1.2",
     "dependencies": {
-        "bash.origin.test": "^0.1.25"
+        "bash.origin.test": "^0.1.28"
     },
     "scripts": {
         "test": "BO_ROOT_SCRIPT_PATH=$(pwd)/node_modules/bash.origin/bash.origin bash.origin.test examples"
