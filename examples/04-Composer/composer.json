@@ -1,0 +1,6 @@
+{
+    "name": "bash-origin/bash.origin.php",
+    "require": {
+        "ccampbell/chromephp": "4.1.0"
+    }
+}

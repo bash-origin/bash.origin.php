@@ -1,4 +1,4 @@
 *~.compiled.bash
 /node_modules/
 /examples/*/.actual.*
-/.installed.production
+/.installed*

@@ -8,6 +8,9 @@ depend {
 }
 
 
+CALL_php composer install
+
+
 local port="8080"
 
 CALL_php start ${port}
