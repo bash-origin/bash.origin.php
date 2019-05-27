@@ -2,10 +2,10 @@
     "uid": "github.com/bash-origin/bash.origin.php",
     "name": "bash.origin.php",
     "version": "0.1.2",
-    "dependencies": {
-        "bash.origin.test": "^0.1.28"
+    "__dependencies": {
+        "bash.origin.lib": ""
     },
     "scripts": {
-        "test": "BO_ROOT_SCRIPT_PATH=$(pwd)/node_modules/bash.origin/bash.origin bash.origin.test examples"
+        "test": "bash.origin.test examples"
     }
 }
