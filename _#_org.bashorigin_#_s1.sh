@@ -27,12 +27,17 @@ function EXPORTS_eval {
 	php -r "$1"
 }
 
+function EXPORTS_run {
+	php -S "127.0.0.1:${1}" -t "$(pwd)"
+}
+
 function EXPORTS_start {
+    # TODO: Terminate if our process terminates
 	php -S "127.0.0.1:${1}" -t "$(pwd)" &
 }
 
 function EXPORTS_stop {
-	ps -ef | grep "${1}" | grep -v grep | awk '{print $2}' | xargs kill -9
+	ps -ef | grep "127.0.0.1:${1}" | grep -v grep | awk '{print $2}' | xargs kill -9
 }
 
 function PRIVATE_ensureComposerInstalled {
