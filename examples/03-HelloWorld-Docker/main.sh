@@ -4,7 +4,7 @@
 echo "TEST_MATCH_IGNORE>>>"
 
 depend {
-    "docker": {
+	"docker": {
 		"@com.github/bash-origin/bash.origin.docker#s1": "localhost"
 	},
 	"request": "@com.github/bash-origin/bash.origin.request#s1"
