@@ -1,11 +1,11 @@
 {
-    "uid": "github.com/bash-origin/bash.origin.php",
-    "name": "bash.origin.php",
-    "version": "0.1.2",
-    "__dependencies": {
-        "bash.origin.lib": ""
-    },
-    "scripts": {
-        "test": "bash.origin.test examples"
-    }
+  "uid": "github.com/bash-origin/bash.origin.php",
+  "name": "bash.origin.php",
+  "version": "0.2.0-pre.0",
+  "scripts": {
+    "test": "bash.origin.test examples"
+  },
+  "dependencies": {
+    "bash.origin.lib": "^0.4.0-pre.0"
+  }
 }
