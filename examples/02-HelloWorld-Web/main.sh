@@ -3,8 +3,8 @@
 echo "TEST_MATCH_IGNORE>>>"
 
 depend {
-    "php": "@com.github/bash-origin/bash.origin.php#s1",
-	"request": "@com.github/bash-origin/bash.origin.request#s1"
+    "php": "bash.origin.php # runner/v0",
+    "request": "bash.origin.request # request/v0"
 }
 
 

@@ -45,14 +45,14 @@ function PRIVATE_ensureComposerInstalled {
 
 	BO_ensureInSystemCache SOURCE_DOWNLOADED_PATH \
 			"github.com/composer/composer" \
-			"1.5.2" \
-			"https://github.com/composer/composer/archive/1.5.2.zip"
+			"1.9.0" \
+			"https://github.com/composer/composer/archive/1.9.0.zip"
 
 	pushd "$SOURCE_DOWNLOADED_PATH" > /dev/null
 		if [ ! -e ".installed" ]; then
 			BO_ensureInSystemCache PHAR_DOWNLOADED_PATH \
 					"getcomposer.org/composer.phar" \
-					"1.5.2" \
+					"1.9.0" \
 					"https://getcomposer.org/composer.phar"
 			php "$PHAR_DOWNLOADED_PATH" install
 			touch ".installed"

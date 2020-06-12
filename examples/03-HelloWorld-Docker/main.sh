@@ -5,9 +5,9 @@ echo "TEST_MATCH_IGNORE>>>"
 
 depend {
 	"docker": {
-		"@com.github/bash-origin/bash.origin.docker#s1": "localhost"
+		"bash.origin.docker # runner/v0": "localhost"
 	},
-	"request": "@com.github/bash-origin/bash.origin.request#s1"
+    "request": "bash.origin.request # request/v0"
 }
 
 
